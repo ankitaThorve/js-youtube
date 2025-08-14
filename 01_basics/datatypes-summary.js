@@ -34,3 +34,27 @@ const myFunction = function(){
 myFunction()
 
 console.log(typeof isLoggedIn)
+
+// --------------------------------------------------------------------
+
+// Stack(Premitive), Heap(Non-Premitive)
+
+let myChannelName = "ankitaytchannel"
+let anotherName = myChannelName
+
+anotherName = "codewithankita"
+
+console.log(myChannelName)
+console.log(anotherName)
+
+let user1={
+    email:"user@google.com",
+    upi: "user@ybl"
+}
+
+let user2 = user1
+
+user2.email = "ankita@gmail.com"
+
+console.log(user1.email)
+console.log(user2.email)
