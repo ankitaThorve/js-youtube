@@ -15,5 +15,16 @@ const programming = ['js', 'cpp', 'rb', 'java']
 
 for (const key in programming) {
     // console.log(key)
-    console.log(programming[key])
+    // console.log(programming[key])
 }
+
+// const map = new Map()
+// map.set('IN', "India")
+// map.set('UK', "United Kingdom")
+// map.set('FR', "France")
+// map.set('IN', "India")
+
+// for (const key in map) {
+//     console.log(key)
+// }
+
