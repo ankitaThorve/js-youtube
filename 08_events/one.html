@@ -8,14 +8,58 @@
 <body style="background-color: #414141; color: aliceblue;">
     <h2>Amazing Pixels</h2>
     <div>
-        <ul>
-            <li><img width="200px" id="" src="https://www.pexels.com/photo/classic-european-architecture-in-black-and-white-33672106/"></li>
-            <li><img width="200px" id="" src="https://www.pexels.com/photo/black-and-white-street-scene-in-nancy-france-32922140/"></li>
-            <li><img width="200px" id="" src="https://www.pexels.com/photo/aerial-view-of-candlelit-vigil-ceremony-at-night-33278756/"></li>
-            <li><img width="200px" id="" src="https://www.pexels.com/photo/romantic-couple-embracing-with-scenic-city-view-33801362/"></li>
-            <li><img width="200px" id="" src="https://www.pexels.com/photo/vintage-botanical-prints-in-paris-market-32757439/"></li>
+        <ul id="images">
+            <li><img width="200px" id="food" src="https://images.pexels.com/photos/9001222/pexels-photo-9001222.jpeg"></li>
+            <li><img width="200px" id="" src="https://images.pexels.com/photos/33689812/pexels-photo-33689812.jpeg"></li>
+            <li><img width="200px" id="" src="https://images.pexels.com/photos/33629228/pexels-photo-33629228.jpeg"></li>
+            <li><img width="200px" id="" src="https://images.pexels.com/photos/5629930/pexels-photo-5629930.jpeg"></li>
+            <li><img width="200px" id="" src="https://images.pexels.com/photos/10886109/pexels-photo-10886109.jpeg"></li>
+            <li><a style="color: aliceblue;" href="https://google.com/" id="google">Google</a></li>
         </ul>
     </div>
-    <img src="https://www.pexels.com/photo/crystal-clear-waters-of-sapadere-canyon-turkiye-33405144/" alt="">
 </body>
+<script>
+    // document.getElementById('food').onclick = function(){
+    //     alert('food food')
+    // }
+
+    document.getElementById('food').addEventListener('click', function(e){
+        // alert('food again')
+        // console.log(e)
+    }, false)
+    
+    // attachEvent
+    // jQuery - on
+
+// Events - type, timestamps, defaultPrevented, 
+// target, toElement, srcElement, currentTarget, 
+// clientX, clientY, screenX, screenY, altKey, ctrlKey, keyCode
+
+// document.getElementById('images').addEventListener('click', function(e){
+//     // alert('food again')
+//     console.log("clicked inside the ul")
+// }, false)
+
+// document.getElementById('food').addEventListener('click', function(e){
+//     // alert('food again')
+//     console.log("clicked food")
+//     e.stopPropagation()
+// }, false)
+
+// document.getElementById('google').addEventListener('click', function(e){
+//     e.preventDefault()
+//     console.log("google clicked")
+// }, false)
+
+document.querySelector('#images').addEventListener('click', function(e){
+    // console.log(e.target.parentNode)
+    console.log(e.target.tagName)
+    if (e.target.tagName === 'IMG') {
+        console.log(e.target.id)
+        let removeIt = e.target.parentNode
+        removeIt.remove()
+    }
+    // removeIt.parentNode.removeChild(removeIt)
+},false)
+</script>
 </html>
