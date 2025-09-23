@@ -1,0 +1,16 @@
+// promises.js
+function wait(ms) {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(`Waited ${ms}ms`), ms);
+  });
+}
+
+async function main() {
+  console.log("Start");
+  const result = await wait(2000);
+  console.log(result);
+  console.log("End");
+}
+
+main();
+
